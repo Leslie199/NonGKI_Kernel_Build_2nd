@@ -123,6 +123,11 @@ jobs:
       - name: 🧰 Patch Kernel of Re:Kernel
         uses: ./.github/workflows/patch-rekernel
 
+      - name: Install Coccinelle
+        shell: bash
+        run: |
+          sudo apt-get update && sudo apt-get install -y coccinelle
+
       - name: 💿 Patch Kernel of Droidspaces
         uses: ./.github/workflows/patch-droidspaces
 
